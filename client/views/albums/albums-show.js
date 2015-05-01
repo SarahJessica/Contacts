@@ -44,6 +44,11 @@ angular.module('photoAlbums')
     }
     $scope.photo = null;
   };
+
+  $scope.goBack = function(){
+    $state.go('albums.list');
+  };
+
   function displayInfo(){
     var userAlbums = $scope.afUser.albums;
     var key = Object.keys(userAlbums[$state.params.album])[0];

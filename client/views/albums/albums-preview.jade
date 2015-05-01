@@ -1,0 +1,18 @@
+.row
+  .col-sm-4.col-sm-offset-4
+    h2 {{name}}
+.row
+  .col-sm-2.col-sm-offset-4
+    img.img-responsive.img-thumbnail.feature(ng-src='{{profPic}}')
+  .col-sm-4
+    h3 Contact Information
+    h4 Address: {{description}}
+    h4 Birthday: {{dob | date: 'MM-dd-yyyy'}}
+    h4 Telephone: {{phone}}
+    h4 Email: {{email}}
+    h4 Homepage: {{url}}
+    h4 Facebook: {{facebook}}
+    h4 Twitter: {{twitter}}
+.row
+  .col-sm-4.col-sm-offset-4
+    button.btn.btn-warning(ng-click='goBack()') Back

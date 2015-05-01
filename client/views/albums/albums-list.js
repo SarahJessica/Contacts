@@ -7,6 +7,10 @@ angular.module('photoAlbums')
 
   });
 
+  $scope.goToEdit = function(album, $index){
+    $state.go('albums.show');
+  };
+
   $scope.removeAlbum = function(albumName, index){
     Album.removeAlbum(albumName, index);
 
