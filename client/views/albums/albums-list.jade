@@ -1,14 +1,17 @@
 
 .row
-  .col-xs-4.col-xs-offset-4
-    H4 Contacts List
+  .col-lg-10.contacts-list-pg
+    //H4 Contacts List
     table.table.table-striped
       thead
         tr
+          th
           th Contact
+          th Edit
           th Delete
       tbody
         tr(ng-repeat='album in albums track by $index')
+          td: i.icon-preview.mdi-action-account-circle
           td: a(ui-sref='albums.preview({album:album})') {{album}}
-          td: button.btn.btn-info.btn-xs(ui-sref='albums.show({album:album})') Edit
-          td: button.btn.btn-danger.btn-xs(ng-click='removeAlbum(album, $index)') Delete
+          td: button.btn.btn-info(ui-sref='albums.show({album:album})') Edit
+          td: button.btn.btn-danger(ng-click='removeAlbum(album, $index)') Delete

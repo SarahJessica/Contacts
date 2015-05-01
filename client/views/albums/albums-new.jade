@@ -1,10 +1,10 @@
 
 .row
-  .col-xs-4.col-xs-offset-4
+  .col-xs-4.col-xs-offset-4.create-contact
     h4 New Contact
     form(novalidate)
       .form-group
         label Name
-        input.form-control(type='text', ng-model='album.name')
+        input.form-control(type='text', ng-model='album.name', placeholder="contact's name")
       .form-group
-        button.btn.btn-xs.btn-success(ng-click='add(album)') Add Contact
+        button.btn.btn-primary.btn-success(ng-click='add(album)') Add Contact
